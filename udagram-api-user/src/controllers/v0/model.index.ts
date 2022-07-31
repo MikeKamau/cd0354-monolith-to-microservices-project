@@ -1,3 +1,3 @@
-import {FeedItem} from './feed/models/FeedItem';
+import {User} from './users/models/User';
 
-export const V0_MODELS = [FeedItem];
+export const V0_MODELS = [User];
