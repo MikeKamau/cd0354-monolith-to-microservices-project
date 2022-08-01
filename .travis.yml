@@ -28,3 +28,4 @@ after_success:
   - docker push mikekamu/udagram-api-user:v1
   - docker push mikekamu/udagram-frontend:v1
   - docker push mikekamu/reverseproxy:v1
+  
