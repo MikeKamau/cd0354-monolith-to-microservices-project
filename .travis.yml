@@ -24,3 +24,4 @@ after_success:
   - docker push mikekamu/udagram-api-user:latest
   - docker push mikekamu/udagram-frontend:latest
   - docker push mikekamu/udagram-reverseproxy:latest
+  
