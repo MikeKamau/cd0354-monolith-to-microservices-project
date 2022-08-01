@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  AWS_BUCKET: arn:aws:s3:::microservice22bucket
+  AWS_PROFILE: default
+  AWS_REGION: us-east-1
+  JWT_SECRET: secret
+  POSTGRES_DB: postgres
+  POSTGRES_USERNAME: usersuper
+  POSTGRES_PASSWORD: us3rS4p3r
+  POSTGRES_HOST: microservice22rds.cszpjt2yxjtf.us-east-1.rds.amazonaws.com
+  URL: http://localhost:8100 
+metadata:
+  name: env-config
