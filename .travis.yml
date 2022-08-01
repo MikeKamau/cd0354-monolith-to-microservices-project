@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - 12
+
+services:
+  - docker
+
+before_install:
+
+install:
+
+before_script:
+
+script:
+  - docker --version
+  - docker build -f udagram-feed-api/Dockerfile -t  mikekamu/udagram-feed-api:latest udagram-feed-api
+  - docker build -f udagram-user-api/Dockerfile -t  mikekamu/udagram-user-api:latest udagram-user-api
+  - docker build -f udagram-frontend/Dockerfile -t  mikekamu/udagram-frontend:latest udagram-frontend
+  - docker build -f udagram-reverse-proxy/Dockerfile -t  mikekamu/udagram-reverse-proxy:latest udagram-reverse-proxy
+
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push mikekamu/udagram-feed-api:latest
+  - docker push mikekamu/udagram-user-api:latest
+  - docker push mikekamu/udagram-frontend:latest
+  - docker push mikekamu/udagram-reverse-proxy:latest
