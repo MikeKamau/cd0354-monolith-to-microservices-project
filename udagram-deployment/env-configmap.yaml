@@ -6,8 +6,8 @@ data:
   AWS_REGION: us-east-1
   JWT_SECRET: secret
   POSTGRES_DB: postgres
-  POSTGRES_USERNAME: usersuper
-  POSTGRES_PASSWORD: us3rS4p3r
+  POSTGRES_USERNAME: __YOUR USERNAME__
+  POSTGRES_PASSWORD: __YOUR PASSWORD__
   POSTGRES_HOST: microservice22rds.cszpjt2yxjtf.us-east-1.rds.amazonaws.com
   URL: http://localhost:8100 
 metadata:
